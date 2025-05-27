@@ -153,7 +153,7 @@ void draw_animation(lv_obj_t *canvas, struct zmk_widget_screen *widget) {
         lv_obj_align(art, LV_ALIGN_TOP_LEFT, -40, -18);
 #else
         /* Fixed image adjustment */
-        lv_obj_align(art, LV_ALIGN_TOP_LEFT, 18, 2);
+        lv_obj_align(art, LV_ALIGN_TOP_LEFT, 18, 0);
 #endif
     }
 
