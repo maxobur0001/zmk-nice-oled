@@ -360,6 +360,10 @@ const lv_img_dsc_t kerfur3 = {
 };
 
 
+#ifndef LV_ATTRIBUTE_IMG_KERFUR4
+#define LV_ATTRIBUTE_IMG_KERFUR4
+#endif
+
 const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_KERFUR4 uint8_t kerfur4_map[] = {
 #if CONFIG_NICE_VIEW_WIDGET_INVERTED
         0x00, 0x00, 0x00, 0xff, /*Color of index 0*/
