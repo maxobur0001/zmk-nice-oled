@@ -59,11 +59,17 @@ const lv_img_dsc_t *pokemon_imgs[] = {
     &pokemon15, &pokemon16, &pokemon17, &pokemon18, &pokemon19, &pokemon20,
 };
 
-// CONFIG_NICE_OLED_NECO_ANIMATION
-LV_IMG_DECLARE(necoarc_0);
+// CONFIG_NICE_OLED_KERFUR_ANIMATION
+LV_IMG_DECLARE(kerfur0);
+LV_IMG_DECLARE(kerfur1);
+LV_IMG_DECLARE(kerfur2);
+LV_IMG_DECLARE(kerfur3);
+LV_IMG_DECLARE(kerfur4);
 
-const lv_img_dsc_t *necoarc_imgs[] = {
-    &necoarc_0,
+const lv_img_dsc_t *kerfur_imgs[] = {
+    &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur1,
+    &kerfur2, &kerfur2, &kerfur2, &kerfur2, &kerfur2, &kerfur3, 
+    &kerfur1, &kerfur4, 
 };
 
 // CONFIG_NICE_OLED_VIM
@@ -103,13 +109,13 @@ void draw_animation(lv_obj_t *canvas, struct zmk_widget_screen *widget) {
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);
     lv_animimg_start(art);
 
-#elif IS_ENABLED(CONFIG_NICE_OLED_NECO_ANIMATION)
-    /* If we have the Neco animation enabled */
+#elif IS_ENABLED(CONFIG_NICE_OLED_KERFUR_ANIMATION)
+    /* If we have the Kerfur animation enabled */
     art = lv_animimg_create(widget->obj);
     lv_obj_center(art);
 
-    lv_animimg_set_src(art, (const void **)necoarc_imgs, 1);
-    lv_animimg_set_duration(art, CONFIG_NICE_OLED_NECO_ANIMATION_MS);
+    lv_animimg_set_src(art, (const void **)kerfur_imgs, 1);
+    lv_animimg_set_duration(art, CONFIG_NICE_OLED_KERFUR_ANIMATION_MS);
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);
     lv_animimg_start(art);
 

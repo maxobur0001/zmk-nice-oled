@@ -63,11 +63,11 @@ config NICE_OLED_POKEMON_ANIMATION_MS
     int "Animation length in milliseconds"
     default 4800
 
-config NICE_OLED_NECO_ANIMATION
+config NICE_OLED_KERFUR_ANIMATION
     bool "Enable animation on peripheral"
     default n
 
-config NICE_OLED_NECO_ANIMATION_MS
+config NICE_OLED_KERFUR_ANIMATION_MS
     int "Animation length in milliseconds"
     default 960
 
