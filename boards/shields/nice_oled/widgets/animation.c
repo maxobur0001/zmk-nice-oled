@@ -67,9 +67,10 @@ LV_IMG_DECLARE(kerfur3);
 LV_IMG_DECLARE(kerfur4);
 
 const lv_img_dsc_t *kerfur_imgs[] = {
-    &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, 
-    &kerfur0, &kerfur0, &kerfur1, &kerfur2, &kerfur3, &kerfur2,
-    &kerfur2, &kerfur2, &kerfur2, &kerfur3, &kerfur1, &kerfur4, 
+    &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, 
+    &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, &kerfur0, 
+    &kerfur1, &kerfur2, &kerfur2, &kerfur2, &kerfur2, &kerfur2, &kerfur2, 
+    &kerfur3, &kerfur1, &kerfur4, 
 };
 
 // CONFIG_NICE_OLED_VIM
@@ -114,7 +115,7 @@ void draw_animation(lv_obj_t *canvas, struct zmk_widget_screen *widget) {
     art = lv_animimg_create(widget->obj);
     lv_obj_center(art);
 
-    lv_animimg_set_src(art, (const void **)kerfur_imgs, 18);
+    lv_animimg_set_src(art, (const void **)kerfur_imgs, 21);
     lv_animimg_set_duration(art, CONFIG_NICE_OLED_KERFUR_ANIMATION_MS);
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);
     lv_animimg_start(art);
